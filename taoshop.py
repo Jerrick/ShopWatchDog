@@ -1,6 +1,7 @@
 #!/usr/bin/python
 #encoding:utf8
 import re
+import sys
 import urllib2 as url 
 import string
 import urllib
