@@ -36,7 +36,7 @@ def main():
 	print shop_html
 
     #注意要用非贪婪匹配
-    goods_details = getList(u"<a data-spm=\"d4909061\"[\s\S]*?href=\"(.*?)\"[\s\S]*?title=\"(.*?)\"[\s\S]*?target", str(shop_html.encode('utf8')).strip() )
+    goods_details = getList(u"<a data-spm=\"d4909061\"[\s\S]*?href=\"(.*?)\"[\s\S]*?title=\"(.*?)\"[\s\S]*?target", str(shop_html.encode('utf-8')).strip() )
     for gd in goods_details:
         print "link=%s, title=%s" %(gd[0], gd[1] )
 
