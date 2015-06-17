@@ -35,12 +35,8 @@ def main():
 	shop_html = getShopHtml(s1)
 	print shop_html
 
-    '''
-    <a data-spm="d4909061"  href="http://item.taobao.com/item.htm?id=38223338865"
-    title="14年 5月 小布 blythe Ashley&#39;s Secret 预订 订金" target="_blank">
-    '''
     #注意要用非贪婪匹配
-    goods_details = getList(u"<a data-spm=\"d4909061\"[\s\S]*?href=\"(.*?)\"[\s\S]*?title=\"(.*?)\"[\s\S]*?target", str(shop_html.encode('utf8')).strip() )
+    goods_details = getList(u"<a data-spm=\"d4909061\"[\s\S]*?href=\"(.*?)\"[\s\S]*?title=\"(.*?)\"[\s\S]*?target", str(shop_html.encode('utf-8')).strip() )
     for gd in goods_details:
         print "link=%s, title=%s" %(gd[0], gd[1] )
 
